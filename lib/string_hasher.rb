@@ -1,4 +1,3 @@
-require 'pry'
 class StringHasher
   attr_reader :length
 

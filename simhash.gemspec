@@ -9,7 +9,7 @@ end.flatten
 
 spec = Gem::Specification.new do |s|
   s.name              = "simhash"
-  s.version           = "1.0.2"
+  s.version           = "1.0.3"
   s.author            = "Alex Gusev"
   s.email             = "alex.gusev@bookmate.ru"
   s.homepage          = "http://github.com/bookmate/simhash"
@@ -37,4 +37,6 @@ spec = Gem::Specification.new do |s|
     s.add_dependency(%q<unicode>, [">= 0.3.1"])
     s.add_dependency(%q<activesupport>)
   end
+
+  s.add_development_dependency "pry"
 end

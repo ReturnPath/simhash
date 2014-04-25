@@ -14,5 +14,10 @@ describe Simhash do
         Simhash.hash("in the beginning was the word".split(/./), :hashbits => 64, :token_min_size => 2).to_s
       ).to eq("18446744073709551615")
     end
+
+    it "uses C if available" do
+      expect_any_instance_of(StringHasher).to receive(:c_hash).at_least(:once)
+      Simhash.hash("in the beginning was the word".split, :hashbits => 64, :token_min_size => 2).to_s
+    end
   end
 end

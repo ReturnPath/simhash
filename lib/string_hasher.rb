@@ -6,7 +6,7 @@ class StringHasher
   end
 
   def hash(string)
-    if String.public_instance_methods.include?("hash_vl")
+    if String.public_instance_methods.include?(:hash_vl)
       c_hash(string)
     else
       ruby_hash(string)

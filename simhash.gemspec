@@ -7,13 +7,14 @@ exclude_files = ["**/*.o", "**/*.bundle", "**/Makefile", "*.bundle" ].map do |gl
   Dir[glob]
 end.flatten
 
+require 'simhash/version'
+
 spec = Gem::Specification.new do |s|
-  s.name              = "simhash"
-  s.version           = "1.0.3"
-  s.author            = "Alex Gusev"
-  s.email             = "alex.gusev@bookmate.ru"
+  s.name              = "rp-simhash"
+  s.version           = Simhash::VERSION
+  s.authors           = ["Alex Gusev", "Ryan Michael"]
+  s.email             = ["alex.gusev@bookmate.ru", "kerinin@gmail.com"]
   s.homepage          = "http://github.com/bookmate/simhash"
-  s.rubyforge_project = "simhash"
   s.description       = "Implementation of Charikar simhashes in Ruby"
   s.platform          = Gem::Platform::RUBY
   s.summary           = "Gives you possbility to convert string into simhashes to futher use: finding near-duplicates, similar strings, etc."
